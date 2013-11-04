@@ -16,9 +16,6 @@ void setup() {
   
   // Optional set protocol (default is 1, will work for most outlets)
   mySwitch.setProtocol(1);
-
-  // Set pulse length.
-  mySwitch.setPulseLength(232);
   
   // Optional set number of transmission repetitions.
   mySwitch.setRepeatTransmit(10);
@@ -28,15 +25,26 @@ void setup() {
 }
 
 void loop() {
-  char buffer[13];
-  buffer[12] = '\0';
+  char buffer[16];
+  buffer[15] = '\0';
+  char pulseLength[4];
+  char triState[13];
+  triState[12] = '\0';
   
-  // Wait for 12 bytes on serial
+  // Wait for 15 bytes on serial
   while (Serial.available() > 0) {      
-      Serial.readBytes(buffer, 12);
+      Serial.readBytes(buffer, 15);
       // Echo
       Serial.println(buffer);
-      // Send thru RF
-      mySwitch.sendTriState(buffer);
+      
+      // First 3 bytes are ASCII encoded pulse length
+      strncpy(pulseLength, buffer, sizeof(pulseLength));
+      pulseLength[3] = '\0';
+      mySwitch.setPulseLength(atoi(pulseLength));  
+      
+      // Rest is Tri-state code
+      memcpy(triState, &buffer[3], 12);
+      Serial.println(triState);
+      mySwitch.sendTriState(triState);
   }
 }
