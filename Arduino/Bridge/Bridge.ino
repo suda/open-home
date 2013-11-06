@@ -1,6 +1,8 @@
 /*
   Basic serial bridge between computer and transmitter.
-  Looks for 12 bytes (ASCII representation of Tri-State code) and sends them to transmitter.
+  Looks for 13 bytes (ASCII representation of Tri-State code and pulse width) 
+  and sends them to transmitter.
+  More: https://github.com/appsome/open-home/wiki/Bridge
   
   Requires rc-switch library: http://code.google.com/p/rc-switch/
 
