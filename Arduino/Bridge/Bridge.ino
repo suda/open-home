@@ -37,16 +37,17 @@ void loop() {
   // Wait for 15 bytes on serial
   while (Serial.available() > 0) {      
       Serial.readBytes(buffer, 15);
-      // Echo
-      Serial.println(buffer);
-      
+
       // First 3 bytes are ASCII encoded pulse length
       strncpy(pulseLength, buffer, sizeof(pulseLength));
       pulseLength[3] = '\0';
+      Serial.print("Pulse length: ");
+      Serial.print(pulseLength);      
       mySwitch.setPulseLength(atoi(pulseLength));  
       
       // Rest is Tri-state code
       memcpy(triState, &buffer[3], 12);
+      Serial.print(" Tri-state code: ");
       Serial.println(triState);
       mySwitch.sendTriState(triState);
   }

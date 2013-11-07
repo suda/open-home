@@ -46,8 +46,6 @@ void loop() {
         i++;
       }    
       i = 0;
-      // Echo
-      mySerial.println(buffer);    
       
       // First 3 bytes are ASCII encoded pulse length
       strncpy(pulseLength, buffer, sizeof(pulseLength));
