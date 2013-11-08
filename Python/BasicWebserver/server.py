@@ -21,7 +21,16 @@ class MainHandler(tornado.web.RequestHandler):
 class SendHandler(tornado.web.RequestHandler):
     def get(self):
         message = self.get_argument('message')
+        
+        # Try to reopen connection
+        try:
+            serial.getCTS()
+        except IOError:
+            serial.close()
+            serial.open()
+
         serial.write(str(message));
+        
         self.redirect('/')
 
 application = tornado.web.Application([    
