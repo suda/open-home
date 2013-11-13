@@ -9,34 +9,30 @@
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta http-equiv="cleartype" content="on">
-
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
-        <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+        
+        <link rel="apple-touch-icon-precomposed" sizes="29x29" href="/static/img/touch/AppIcon29x29.png">
+        <link rel="apple-touch-icon-precomposed" sizes="40x40" href="/static/img/touch/AppIcon40x40.png">
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/static/img/touch/AppIcon60x60.png">        
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/static/img/touch/AppIcon76x76.png">
+        <meta name="apple-mobile-web-app-capable" content="yes">    
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Lights">
 
         <!-- Tile icon for Win8 (144x144 + tile color) -->
-        <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
-        <meta name="msapplication-TileColor" content="#222222">
-
-
-        <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
-        <!--
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="">
-        -->
+        <meta name="msapplication-TileImage" content="/static/img/touch/AppIcon144x144.png">
+        <meta name="msapplication-TileColor" content="#1564FB">
+        <meta name="application-name" content="Lights"/>
 
         <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
         <!--
         <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
         -->
         <style type="text/css">
-        html {
+        html, body {
             font-family: "Helvetica Neue";
             font-weight: 300;
             color: rgb(21, 125, 251);
+            background: #fff;
         }
 
         h1 {
@@ -44,6 +40,12 @@
             font-weight: 500;
             font-size: 24px;            
             text-align: center;
+        }
+
+        h1 span {
+            font-size: 16px;
+            font-weight: 400;
+            opacity: 0.5;
         }
 
         a {
@@ -56,30 +58,56 @@
         }
 
         div > div {
-            margin: 50px 0px;
+            margin: 40px 0px;
         }
         </style>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+        function sendMessage(e, message) {            
+            $.getJSON('/api/send?message=' + message + '&time=' + new Date().getTime());
+
+            e.preventDefault();
+            return false;
+        }
+
+        function sendMessages(e, messages) {
+            for (i in messages) {
+                var message = messages[i];
+                jQuery.ajax('/api/send?message=' + message + '&time=' + new Date().getTime(), { async: false });                
+            }
+
+            e.preventDefault();
+            return false;
+        }
+        </script>
     </head>
     <body>
         <div>
-            <h1>Device 1</h1>
+            <h1>Device 1 <span>set 1448</span></h1>
             <div>
-                <a href="/api/send?message=232F0FF0FFF0101">ON</a>
-                <a href="/api/send?message=232F0FF0FFF0110">OFF</a>
+                <a href="javascript:void(0)" onclick="sendMessage(event, '232F0FF0FFF0101')">ON</a>
+                <a href="javascript:void(0)" onclick="sendMessage(event, '232F0FF0FFF0110')">OFF</a>
             </div>
         </div>
         <div>
-            <h1>Device 2</h1>
+            <h1>Device 2 <span>set 1448</span></h1>
             <div>
-                <a href="/api/send?message=232F0FF0FFF1001">ON</a>
-                <a href="/api/send?message=232F0FF0FFF1010">OFF</a>
+                <a href="javascript:void(0)" onclick="sendMessage(event, '232F0FF0FFF1001')">ON</a>
+                <a href="javascript:void(0)" onclick="sendMessage(event, '232F0FF0FFF1010')">OFF</a>
             </div>
         </div>
         <div>
-            <h1>Device 3</h1>
+            <h1>Device 3 <span>set 1448</span></h1>
             <div>
-                <a href="/api/send?message=232F0FF0FF10001">ON</a>
-                <a href="/api/send?message=232F0FF0FF10010">OFF</a>
+                <a href="javascript:void(0)" onclick="sendMessage(event, '232F0FF0FF10001')">ON</a>
+                <a href="javascript:void(0)" onclick="sendMessage(event, '232F0FF0FF10010')">OFF</a>
+            </div>
+        </div>
+        <div>
+            <h1>Device group 1+3 <span>set 1441</span></h1>
+            <div>
+                <a href="javascript:void(0)" onclick="sendMessages(event, ['22900F0FFFF0101', '22900F0FFF10001'])">ON</a>
+                <a href="javascript:void(0)" onclick="sendMessages(event, ['22900F0FFFF0110', '22900F0FFF10010'])">OFF</a>
             </div>
         </div>
     </body>

@@ -6,6 +6,7 @@ Part of Open Home https://github.com/appsome/open-home
 
 import sys, getopt, os
 from os import path
+from time import sleep
 
 import tornado.ioloop
 import tornado.web
@@ -29,13 +30,18 @@ class SendHandler(tornado.web.RequestHandler):
             serial.close()
             serial.open()
 
-        serial.write(str(message));
-        
-        self.redirect('/')
+        serial.write(str(message))
+        print 'Sent ' + str(message)
+
+        sleep(0.5)
+
+        self.set_header('Content-Type', 'application/json')
+        self.write('{ response: "ok" }')
 
 application = tornado.web.Application([    
     (r"/", MainHandler),
     (r"/api/send", SendHandler),
+    (r'/static/(.*)', tornado.web.StaticFileHandler, {'path': path.join(path.dirname(__file__), 'static')}),
 ])
 
 device = None
