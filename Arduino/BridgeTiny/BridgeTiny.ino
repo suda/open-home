@@ -12,6 +12,9 @@
 #include <RCSwitch.h>
 #include <SoftwareSerial.h>
 
+// Transmitter is connected to ATTiny Pin #2
+#define TRANSMIT_PIN 2
+
 RCSwitch mySwitch = RCSwitch();
 SoftwareSerial mySerial(4, 3);
 
@@ -27,8 +30,8 @@ void setup() {
   // Optional set number of transmission repetitions.
   mySwitch.setRepeatTransmit(10);
   
-  // Transmitter is connected to Arduino Pin #10  
-  mySwitch.enableTransmit(10);
+  pinMode(TRANSMIT_PIN, OUTPUT);  
+  mySwitch.enableTransmit(TRANSMIT_PIN);
 }
 
 void loop() {
