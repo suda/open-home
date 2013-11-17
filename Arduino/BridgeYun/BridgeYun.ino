@@ -45,35 +45,6 @@ void loop() {
   }
 
   delay(50);
-  
-  char buffer[16];
-  buffer[15] = '\0';
-  char pulseLength[4];
-  char triState[13];
-  triState[12] = '\0';
-  
-  int i = 0;
-  // Wait for 15 bytes on serial
-//  while (mySerial.available() > 0) {
-//      while (i < 15) {
-//        buffer[i] = mySerial.read();
-//        i++;
-//      }    
-//      i = 0;
-//      
-//      // First 3 bytes are ASCII encoded pulse length
-//      strncpy(pulseLength, buffer, sizeof(pulseLength));
-//      pulseLength[3] = '\0';
-//      mySerial.print("Pulse length: ");
-//      mySerial.print(pulseLength);
-//      mySwitch.setPulseLength(atoi(pulseLength));  
-//      
-//      // Rest is Tri-state code
-//      memcpy(triState, &buffer[3], 12);
-//      mySerial.print(" Tri-state code: ");
-//      mySerial.println(triState);
-//      mySwitch.sendTriState(triState);
-//  }
 }
 
 void process(YunClient client) {
