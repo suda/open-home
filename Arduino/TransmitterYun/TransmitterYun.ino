@@ -1,6 +1,8 @@
 /*
-  Basic serial bridge between computer and transmitter.
-  Version fot Arduino Yun.
+  Basic webserver and transmitter. 
+  Version for Arduino Yun.
+  
+  More: https://github.com/appsome/open-home/wiki/TransmitterYun  
   
   Requires rc-switch library: http://code.google.com/p/rc-switch/
 
@@ -12,7 +14,7 @@
 #include <YunServer.h>
 #include <YunClient.h>
 
-// Transmitter is connected to ATTiny Pin #2
+// Transmitter is connected to Arduino Pin #2
 #define TRANSMIT_PIN 2
 
 RCSwitch mySwitch = RCSwitch();

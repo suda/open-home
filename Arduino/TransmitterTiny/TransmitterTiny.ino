@@ -1,9 +1,10 @@
 /*
-  Basic serial bridge between computer and transmitter.
-  Looks for 15 bytes (ASCII representation of Tri-State code and pulse width) 
+  Basic transmitter which sends commands from computer connected via USB.
+  Version for ATTiny 45/85 microcontrollers.
+  Looks for 15 bytes (ASCII representation of Tri-State code and pulse length)
   and sends them to transmitter.
   
-  More: https://github.com/appsome/open-home/wiki/Bridge
+  More: https://github.com/appsome/open-home/wiki/TransmitterTiny
   
   Requires rc-switch library: http://code.google.com/p/rc-switch/
 
@@ -11,11 +12,19 @@
 */
 
 #include <RCSwitch.h>
+#include <SoftwareSerial.h>
+
+// Transmitter is connected to ATTiny Pin #2
+#define TRANSMIT_PIN 2
 
 RCSwitch mySwitch = RCSwitch();
+SoftwareSerial mySerial(4, 3);
 
 void setup() {
-  Serial.begin(9600);
+  // Base value got from TinyTuner, but had to adjust manually
+  OSCCAL = 0x83;
+  
+  mySerial.begin(9600);
   
   // Optional set protocol (default is 1, will work for most outlets)
   mySwitch.setProtocol(1);
@@ -23,8 +32,8 @@ void setup() {
   // Optional set number of transmission repetitions.
   mySwitch.setRepeatTransmit(10);
   
-  // Transmitter is connected to Arduino Pin #10  
-  mySwitch.enableTransmit(10);
+  pinMode(TRANSMIT_PIN, OUTPUT);  
+  mySwitch.enableTransmit(TRANSMIT_PIN);
 }
 
 void loop() {
@@ -34,21 +43,26 @@ void loop() {
   char triState[13];
   triState[12] = '\0';
   
+  int i = 0;
   // Wait for 15 bytes on serial
-  while (Serial.available() > 0) {      
-      Serial.readBytes(buffer, 15);
-
+  while (mySerial.available() > 0) {
+      while (i < 15) {
+        buffer[i] = mySerial.read();
+        i++;
+      }    
+      i = 0;
+      
       // First 3 bytes are ASCII encoded pulse length
       strncpy(pulseLength, buffer, sizeof(pulseLength));
       pulseLength[3] = '\0';
-      Serial.print("Pulse length: ");
-      Serial.print(pulseLength);      
+      mySerial.print("Pulse length: ");
+      mySerial.print(pulseLength);
       mySwitch.setPulseLength(atoi(pulseLength));  
       
       // Rest is Tri-state code
       memcpy(triState, &buffer[3], 12);
-      Serial.print(" Tri-state code: ");
-      Serial.println(triState);
+      mySerial.print(" Tri-state code: ");
+      mySerial.println(triState);
       mySwitch.sendTriState(triState);
   }
 }
