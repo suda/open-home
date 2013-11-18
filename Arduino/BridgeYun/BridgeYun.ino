@@ -68,9 +68,10 @@ void parse433(YunClient client) {
     triStateString = client.readStringUntil('/');
     triStateString.toCharArray(triStateCode, 12);
     mySwitch.sendTriState(triStateCode);
-    client.print(F("Sent "));
-    client.println(triStateString);
+    client.print(F("{ sent: \""));
+    client.print(triStateString);
+    client.print(F("\" }"));
   } else {
-    client.print(F("Unsufficient paramenters"));  
+    client.print(F("{ error: \"Unsufficient paramenters\" }"));  
   }
 }
