@@ -63,8 +63,13 @@
         </style>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>
-        function sendMessage(e, message) {            
-            $.getJSON('/api/send?message=' + message + '&time=' + new Date().getTime());
+        String.prototype.splice = function( idx, rem, s ) {
+            return (this.slice(0,idx) + s + this.slice(idx + Math.abs(rem)));
+        };
+
+        function sendMessage(e, message) {
+            message = message.splice(3, 0, '/');
+            $.getJSON('/arduino/433/' + message + '/?time=' + new Date().getTime());
 
             e.preventDefault();
             return false;
@@ -72,13 +77,15 @@
 
         function sendMessages(e, messages) {
             for (i in messages) {
-                var message = messages[i];
-                jQuery.ajax('/api/send?message=' + message + '&time=' + new Date().getTime(), { async: false });                
+                var message = messages[i].splice(3, 0, '/');
+                jQuery.ajax('/arduino/433/' + message + '/?time=' + new Date().getTime(), { async: false });                
             }
 
             e.preventDefault();
             return false;
         }
+
+
         </script>
     </head>
     <body>

@@ -20,8 +20,8 @@ class MainHandler(tornado.web.RequestHandler):
         self.write(loader.load("index.html").generate())
 
 class SendHandler(tornado.web.RequestHandler):
-    def get(self):
-        message = self.get_argument('message')
+    def get(self, pulse_length, tri_state_code):
+        message = str(pulse_length) + tri_state_code
         
         # Try to reopen connection
         try:
@@ -30,17 +30,16 @@ class SendHandler(tornado.web.RequestHandler):
             serial.close()
             serial.open()
 
-        serial.write(str(message))
-        print 'Sent ' + str(message)
+        serial.write(str(message))        
 
         sleep(0.5)
 
         self.set_header('Content-Type', 'application/json')
-        self.write('{ response: "ok" }')
+        self.write('{ sent: "' + tri_state_code + '" }')
 
 application = tornado.web.Application([    
     (r"/", MainHandler),
-    (r"/api/send", SendHandler),
+    (r"/arduino/433/(?P<pulse_length>[0-9]+)/(?P<tri_state_code>[01F]+)/", SendHandler),
     (r'/static/(.*)', tornado.web.StaticFileHandler, {'path': path.join(path.dirname(__file__), 'static')}),
 ])
 
