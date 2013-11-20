@@ -61,17 +61,17 @@ void parse433(YunClient client) {
   int pulseLength;
   String triStateString;
   char triStateCode[13];
-  triStateCode[12] = '\0';
   
   pulseLength = client.parseInt();
   mySwitch.setPulseLength(pulseLength);
   
   if (client.read() == '/') {
     triStateString = client.readStringUntil('/');
-    triStateString.toCharArray(triStateCode, 12);
+    triStateString.toCharArray(triStateCode, 13);
     mySwitch.sendTriState(triStateCode);
-    client.print(F("{ sent: \""));
-    client.print(triStateString);
+
+    client.print(F("{ \"sent\": \""));
+    client.print(triStateCode);
     client.print(F("\" }"));
   } else {
     client.print(F("{ error: \"Unsufficient paramenters\" }"));  
