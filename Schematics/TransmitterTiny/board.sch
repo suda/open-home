@@ -2005,7 +2005,7 @@ Big oval pads</description>
 <part name="R3" library="SparkFun-Passives" deviceset="RESISTOR" device="AXIAL-0.3"/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="CAP" device="PTH"/>
 <part name="C2" library="SparkFun-Capacitors" deviceset="CAP" device="PTH"/>
-<part name="C3" library="SparkFun-Capacitors" deviceset="CAP" device="PTH"/>
+<part name="C3" library="SparkFun-Capacitors" deviceset="CAP" device="PTH1"/>
 <part name="L1" library="SparkFun-Passives" deviceset="INDUCTOR" device="AXIAL-0.6"/>
 <part name="T1" library="adafruit" deviceset="2N2222" device=""/>
 <part name="ISP" library="con-lstb" deviceset="MA06-1" device=""/>
@@ -2151,7 +2151,7 @@ VCC</text>
 <wire x1="-38.1" y1="76.2" x2="-15.24" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$10" class="0">
+<net name="N$2" class="0">
 <segment>
 <pinref part="USBSERIAL" gate="1" pin="1"/>
 <wire x1="-48.26" y1="58.42" x2="-30.48" y2="58.42" width="0.1524" layer="91"/>
