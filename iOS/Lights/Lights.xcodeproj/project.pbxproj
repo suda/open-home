@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06FBA56940954ED99E317C8E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB4A67D89B1B43F49BB0C765 /* libPods.a */; };
 		9C1A22C7183FB5C7000938B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1A22C6183FB5C7000938B2 /* Foundation.framework */; };
 		9C1A22C9183FB5C7000938B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1A22C8183FB5C7000938B2 /* CoreGraphics.framework */; };
 		9C1A22CB183FB5C7000938B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1A22CA183FB5C7000938B2 /* UIKit.framework */; };
@@ -22,6 +23,17 @@
 		9C1A22EB183FB5C7000938B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1A22CA183FB5C7000938B2 /* UIKit.framework */; };
 		9C1A22F3183FB5C7000938B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A22F1183FB5C7000938B2 /* InfoPlist.strings */; };
 		9C1A22F5183FB5C7000938B2 /* LightsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A22F4183FB5C7000938B2 /* LightsTests.m */; };
+		9C29E07218410AD8003CD6A3 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C29E07118410AD8003CD6A3 /* Reveal.framework */; };
+		9C29E07418410BBA003CD6A3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C29E07318410BBA003CD6A3 /* CFNetwork.framework */; };
+		9C29E07618410BC9003CD6A3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C29E07518410BC9003CD6A3 /* QuartzCore.framework */; };
+		9C29E07C18426CAB003CD6A3 /* on.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C29E07A18426CAB003CD6A3 /* on.png */; };
+		9C29E07D18426CAB003CD6A3 /* on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C29E07B18426CAB003CD6A3 /* on@2x.png */; };
+		9C29E08418426F79003CD6A3 /* off.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C29E08218426F79003CD6A3 /* off.png */; };
+		9C29E08518426F79003CD6A3 /* off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C29E08318426F79003CD6A3 /* off@2x.png */; };
+		9C29E088184275C2003CD6A3 /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C29E086184275C2003CD6A3 /* right.png */; };
+		9C29E089184275C2003CD6A3 /* right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C29E087184275C2003CD6A3 /* right@2x.png */; };
+		9C29E08C18427B6C003CD6A3 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C29E08A18427B6C003CD6A3 /* left.png */; };
+		9C29E08D18427B6C003CD6A3 /* left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C29E08B18427B6C003CD6A3 /* left@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +67,19 @@
 		9C1A22F0183FB5C7000938B2 /* LightsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LightsTests-Info.plist"; sourceTree = "<group>"; };
 		9C1A22F2183FB5C7000938B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C1A22F4183FB5C7000938B2 /* LightsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightsTests.m; sourceTree = "<group>"; };
+		9C29E07118410AD8003CD6A3 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reveal.framework; path = "../../../../../../../Applications/Reveal.app/Contents/SharedSupport/iOS-Libraries/Reveal.framework"; sourceTree = "<group>"; };
+		9C29E07318410BBA003CD6A3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		9C29E07518410BC9003CD6A3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9C29E07A18426CAB003CD6A3 /* on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = on.png; sourceTree = "<group>"; };
+		9C29E07B18426CAB003CD6A3 /* on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "on@2x.png"; sourceTree = "<group>"; };
+		9C29E08218426F79003CD6A3 /* off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = off.png; sourceTree = "<group>"; };
+		9C29E08318426F79003CD6A3 /* off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "off@2x.png"; sourceTree = "<group>"; };
+		9C29E086184275C2003CD6A3 /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
+		9C29E087184275C2003CD6A3 /* right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right@2x.png"; sourceTree = "<group>"; };
+		9C29E08A18427B6C003CD6A3 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
+		9C29E08B18427B6C003CD6A3 /* left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left@2x.png"; sourceTree = "<group>"; };
+		BB4A67D89B1B43F49BB0C765 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5939BFDCE6A44218FD615F5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +87,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C29E07618410BC9003CD6A3 /* QuartzCore.framework in Frameworks */,
+				9C29E07418410BBA003CD6A3 /* CFNetwork.framework in Frameworks */,
 				9C1A22C9183FB5C7000938B2 /* CoreGraphics.framework in Frameworks */,
 				9C1A22CB183FB5C7000938B2 /* UIKit.framework in Frameworks */,
 				9C1A22C7183FB5C7000938B2 /* Foundation.framework in Frameworks */,
+				9C29E07218410AD8003CD6A3 /* Reveal.framework in Frameworks */,
+				06FBA56940954ED99E317C8E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,10 +113,12 @@
 		9C1A22BA183FB5C6000938B2 = {
 			isa = PBXGroup;
 			children = (
+				9C29E07118410AD8003CD6A3 /* Reveal.framework */,
 				9C1A22CC183FB5C7000938B2 /* Lights */,
 				9C1A22EE183FB5C7000938B2 /* LightsTests */,
 				9C1A22C5183FB5C7000938B2 /* Frameworks */,
 				9C1A22C4183FB5C7000938B2 /* Products */,
+				D5939BFDCE6A44218FD615F5 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,10 +134,13 @@
 		9C1A22C5183FB5C7000938B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C29E07518410BC9003CD6A3 /* QuartzCore.framework */,
+				9C29E07318410BBA003CD6A3 /* CFNetwork.framework */,
 				9C1A22C6183FB5C7000938B2 /* Foundation.framework */,
 				9C1A22C8183FB5C7000938B2 /* CoreGraphics.framework */,
 				9C1A22CA183FB5C7000938B2 /* UIKit.framework */,
 				9C1A22E8183FB5C7000938B2 /* XCTest.framework */,
+				BB4A67D89B1B43F49BB0C765 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,10 +150,10 @@
 			children = (
 				9C1A22D5183FB5C7000938B2 /* AppDelegate.h */,
 				9C1A22D6183FB5C7000938B2 /* AppDelegate.m */,
-				9C1A22D8183FB5C7000938B2 /* Main_iPhone.storyboard */,
-				9C1A22DB183FB5C7000938B2 /* Main_iPad.storyboard */,
 				9C1A22DE183FB5C7000938B2 /* ViewController.h */,
 				9C1A22DF183FB5C7000938B2 /* ViewController.m */,
+				9C1A22D8183FB5C7000938B2 /* Main_iPhone.storyboard */,
+				9C1A22DB183FB5C7000938B2 /* Main_iPad.storyboard */,
 				9C1A22E1183FB5C7000938B2 /* Images.xcassets */,
 				9C1A22CD183FB5C7000938B2 /* Supporting Files */,
 			);
@@ -129,6 +163,14 @@
 		9C1A22CD183FB5C7000938B2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9C29E07A18426CAB003CD6A3 /* on.png */,
+				9C29E07B18426CAB003CD6A3 /* on@2x.png */,
+				9C29E08218426F79003CD6A3 /* off.png */,
+				9C29E08318426F79003CD6A3 /* off@2x.png */,
+				9C29E08A18427B6C003CD6A3 /* left.png */,
+				9C29E08B18427B6C003CD6A3 /* left@2x.png */,
+				9C29E086184275C2003CD6A3 /* right.png */,
+				9C29E087184275C2003CD6A3 /* right@2x.png */,
 				9C1A22CE183FB5C7000938B2 /* Lights-Info.plist */,
 				9C1A22CF183FB5C7000938B2 /* InfoPlist.strings */,
 				9C1A22D2183FB5C7000938B2 /* main.m */,
@@ -162,9 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C1A22F8183FB5C7000938B2 /* Build configuration list for PBXNativeTarget "Lights" */;
 			buildPhases = (
+				7750F3A8EEF549F0BC0EE20B /* Check Pods Manifest.lock */,
 				9C1A22BF183FB5C7000938B2 /* Sources */,
 				9C1A22C0183FB5C7000938B2 /* Frameworks */,
 				9C1A22C1183FB5C7000938B2 /* Resources */,
+				D8913A3DF8484A5C888B46B6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,10 +275,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C29E08C18427B6C003CD6A3 /* left.png in Resources */,
+				9C29E07C18426CAB003CD6A3 /* on.png in Resources */,
+				9C29E07D18426CAB003CD6A3 /* on@2x.png in Resources */,
+				9C29E08518426F79003CD6A3 /* off@2x.png in Resources */,
+				9C29E089184275C2003CD6A3 /* right@2x.png in Resources */,
+				9C29E088184275C2003CD6A3 /* right.png in Resources */,
+				9C29E08418426F79003CD6A3 /* off.png in Resources */,
 				9C1A22DD183FB5C7000938B2 /* Main_iPad.storyboard in Resources */,
 				9C1A22E2183FB5C7000938B2 /* Images.xcassets in Resources */,
 				9C1A22DA183FB5C7000938B2 /* Main_iPhone.storyboard in Resources */,
 				9C1A22D1183FB5C7000938B2 /* InfoPlist.strings in Resources */,
+				9C29E08D18427B6C003CD6A3 /* left@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +299,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7750F3A8EEF549F0BC0EE20B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D8913A3DF8484A5C888B46B6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9C1A22BF183FB5C7000938B2 /* Sources */ = {
@@ -389,12 +474,18 @@
 		};
 		9C1A22F9183FB5C7000938B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5939BFDCE6A44218FD615F5 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lights/Lights-Prefix.pch";
 				INFOPLIST_FILE = "Lights/Lights-Info.plist";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -402,12 +493,18 @@
 		};
 		9C1A22FA183FB5C7000938B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5939BFDCE6A44218FD615F5 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lights/Lights-Prefix.pch";
 				INFOPLIST_FILE = "Lights/Lights-Info.plist";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -474,6 +571,7 @@
 				9C1A22FA183FB5C7000938B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C1A22FB183FB5C7000938B2 /* Build configuration list for PBXNativeTarget "LightsTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +580,7 @@
 				9C1A22FD183FB5C7000938B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

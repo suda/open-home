@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PDGesturedTableView.h"
 
-@interface ViewController : UITableViewController
+@interface ViewController : UITableViewController <UITableViewDataSource> {
+    BOOL turnOn;
+    BOOL turnOff;
+}
+
+@property (nonatomic, retain) IBOutlet PDGesturedTableView *gesturedTableView;
 
 @end
