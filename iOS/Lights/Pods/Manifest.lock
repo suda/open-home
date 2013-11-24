@@ -1,0 +1,10 @@
+PODS:
+  - PDGesturedTableView (1.0)
+
+DEPENDENCIES:
+  - PDGesturedTableView (~> 1.0)
+
+SPEC CHECKSUMS:
+  PDGesturedTableView: b3d18724f48b36407a35a38d0003cbd0dab86312
+
+COCOAPODS: 0.25.0
