@@ -37,6 +37,10 @@
 		9C9623361843CCBF0058EC4F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9623351843CCBF0058EC4F /* RootViewController.m */; };
 		9C9623381843DDB70058EC4F /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9623371843DDB70058EC4F /* bg@2x.png */; };
 		9C96233B1843EC7D0058EC4F /* InsetTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C96233A1843EC7D0058EC4F /* InsetTextField.m */; };
+		9C96233E1843F1360058EC4F /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C96233C1843F1350058EC4F /* settings.png */; };
+		9C96233F1843F1360058EC4F /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C96233D1843F1360058EC4F /* settings@2x.png */; };
+		9C9623421843F3B60058EC4F /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9623401843F3B60058EC4F /* add.png */; };
+		9C9623431843F3B60058EC4F /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9623411843F3B60058EC4F /* add@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +90,10 @@
 		9C9623371843DDB70058EC4F /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
 		9C9623391843EC7D0058EC4F /* InsetTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsetTextField.h; sourceTree = "<group>"; };
 		9C96233A1843EC7D0058EC4F /* InsetTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsetTextField.m; sourceTree = "<group>"; };
+		9C96233C1843F1350058EC4F /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		9C96233D1843F1360058EC4F /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		9C9623401843F3B60058EC4F /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		9C9623411843F3B60058EC4F /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
 		BB4A67D89B1B43F49BB0C765 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5939BFDCE6A44218FD615F5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,6 +192,10 @@
 				9C29E086184275C2003CD6A3 /* right.png */,
 				9C29E087184275C2003CD6A3 /* right@2x.png */,
 				9C9623371843DDB70058EC4F /* bg@2x.png */,
+				9C96233C1843F1350058EC4F /* settings.png */,
+				9C96233D1843F1360058EC4F /* settings@2x.png */,
+				9C9623401843F3B60058EC4F /* add.png */,
+				9C9623411843F3B60058EC4F /* add@2x.png */,
 				9C1A22CE183FB5C7000938B2 /* Lights-Info.plist */,
 				9C1A22CF183FB5C7000938B2 /* InfoPlist.strings */,
 				9C1A22D2183FB5C7000938B2 /* main.m */,
@@ -291,12 +303,16 @@
 				9C29E08C18427B6C003CD6A3 /* left.png in Resources */,
 				9C29E07C18426CAB003CD6A3 /* on.png in Resources */,
 				9C29E07D18426CAB003CD6A3 /* on@2x.png in Resources */,
+				9C9623421843F3B60058EC4F /* add.png in Resources */,
 				9C29E08518426F79003CD6A3 /* off@2x.png in Resources */,
 				9C29E089184275C2003CD6A3 /* right@2x.png in Resources */,
 				9C29E088184275C2003CD6A3 /* right.png in Resources */,
 				9C29E08418426F79003CD6A3 /* off.png in Resources */,
 				9C1A22DD183FB5C7000938B2 /* Main_iPad.storyboard in Resources */,
+				9C96233E1843F1360058EC4F /* settings.png in Resources */,
 				9C1A22E2183FB5C7000938B2 /* Images.xcassets in Resources */,
+				9C9623431843F3B60058EC4F /* add@2x.png in Resources */,
+				9C96233F1843F1360058EC4F /* settings@2x.png in Resources */,
 				9C1A22DA183FB5C7000938B2 /* Main_iPhone.storyboard in Resources */,
 				9C9623381843DDB70058EC4F /* bg@2x.png in Resources */,
 				9C1A22D1183FB5C7000938B2 /* InfoPlist.strings in Resources */,
