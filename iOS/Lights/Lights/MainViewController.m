@@ -45,6 +45,18 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"add.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(showAddDevice)];
     [self.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
     [self.navigationItem.rightBarButtonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
+    
+    // Load saved lights
+    lights = [NSMutableArray new];
+    documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    fileManager = [NSFileManager defaultManager];
+    
+    NSString *lightsPlistPath = [documentsDirectory stringByAppendingPathComponent:@"lights.plist"];
+    
+    if ([fileManager fileExistsAtPath:lightsPlistPath]) {
+        NSArray *plist = [NSArray arrayWithContentsOfFile:lightsPlistPath];
+        lights = [plist mutableCopy];
+    }
 }
 
 - (void)showSettings {
@@ -62,7 +74,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return [lights count];
 }
 
 -(PDGesturedTableViewCell *)tableView:(PDGesturedTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

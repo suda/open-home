@@ -13,6 +13,11 @@
 @interface MainViewController : UITableViewController <UITableViewDataSource> {
     BOOL turnOn;
     BOOL turnOff;
+    
+    NSString *serverAddress;
+    NSMutableArray *lights;
+    NSString *documentsDirectory;
+    NSFileManager *fileManager;
 }
 
 @property (nonatomic, retain) IBOutlet PDGesturedTableView *gesturedTableView;

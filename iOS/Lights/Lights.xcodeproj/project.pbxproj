@@ -41,6 +41,7 @@
 		9C96233F1843F1360058EC4F /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C96233D1843F1360058EC4F /* settings@2x.png */; };
 		9C9623421843F3B60058EC4F /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9623401843F3B60058EC4F /* add.png */; };
 		9C9623431843F3B60058EC4F /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9623411843F3B60058EC4F /* add@2x.png */; };
+		9C962346184400980058EC4F /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C962345184400980058EC4F /* TableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		9C96233D1843F1360058EC4F /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
 		9C9623401843F3B60058EC4F /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
 		9C9623411843F3B60058EC4F /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
+		9C962344184400980058EC4F /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		9C962345184400980058EC4F /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		BB4A67D89B1B43F49BB0C765 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5939BFDCE6A44218FD615F5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,6 +175,8 @@
 				9C1A22DF183FB5C7000938B2 /* MainViewController.m */,
 				9C9623391843EC7D0058EC4F /* InsetTextField.h */,
 				9C96233A1843EC7D0058EC4F /* InsetTextField.m */,
+				9C962344184400980058EC4F /* TableViewCell.h */,
+				9C962345184400980058EC4F /* TableViewCell.m */,
 				9C1A22D8183FB5C7000938B2 /* Main_iPhone.storyboard */,
 				9C1A22DB183FB5C7000938B2 /* Main_iPad.storyboard */,
 				9C1A22E1183FB5C7000938B2 /* Images.xcassets */,
@@ -369,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C96233B1843EC7D0058EC4F /* InsetTextField.m in Sources */,
+				9C962346184400980058EC4F /* TableViewCell.m in Sources */,
 				9C1A22E0183FB5C7000938B2 /* MainViewController.m in Sources */,
 				9C1A22D7183FB5C7000938B2 /* AppDelegate.m in Sources */,
 				9C9623361843CCBF0058EC4F /* RootViewController.m in Sources */,
