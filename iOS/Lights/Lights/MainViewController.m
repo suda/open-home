@@ -1,18 +1,20 @@
 //
-//  ViewController.m
+//  MainViewController.m
 //  Lights
 //
 //  Created by Wojtek Siudzinski on 22.11.2013.
 //  Copyright (c) 2013 Appsome. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
+#import "JASidePanelController.h"
+#import "UIViewController+JASidePanel.h"
 
-@interface ViewController ()
+@interface MainViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 
 - (void)viewDidLoad
 {
@@ -29,9 +31,26 @@
     [super loadView];
     
     [self.gesturedTableView setEnabled:YES];
-    
     [self.gesturedTableView setEdgeSlidingMargin:0];
     [self.gesturedTableView setEdgeMovingMargin:80];
+
+    // Settings button
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStyleBordered target:self action:@selector(showSettings)];
+    [self.navigationItem.leftBarButtonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
+    
+
+    
+    // Add device
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Add device" style:UIBarButtonItemStyleBordered target:self action:@selector(showAddDevice)];
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
+}
+
+- (void)showSettings {
+    [(RootViewController *)[[[[UIApplication sharedApplication] delegate] window] rootViewController] showLeftPanelAnimated:YES];
+}
+
+- (void)showAddDevice {
+    [(RootViewController *)[[[[UIApplication sharedApplication] delegate] window] rootViewController] showRightPanelAnimated:YES];
 }
 
 #pragma mark UITableView

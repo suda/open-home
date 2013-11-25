@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainViewController.h
 //  Lights
 //
 //  Created by Wojtek Siudzinski on 22.11.2013.
@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "PDGesturedTableView.h"
+#import "RootViewController.h"
 
-@interface ViewController : UITableViewController <UITableViewDataSource> {
+@interface MainViewController : UITableViewController <UITableViewDataSource> {
     BOOL turnOn;
     BOOL turnOff;
 }

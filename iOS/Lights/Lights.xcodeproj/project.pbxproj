@@ -16,7 +16,7 @@
 		9C1A22D7183FB5C7000938B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A22D6183FB5C7000938B2 /* AppDelegate.m */; };
 		9C1A22DA183FB5C7000938B2 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A22D8183FB5C7000938B2 /* Main_iPhone.storyboard */; };
 		9C1A22DD183FB5C7000938B2 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A22DB183FB5C7000938B2 /* Main_iPad.storyboard */; };
-		9C1A22E0183FB5C7000938B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A22DF183FB5C7000938B2 /* ViewController.m */; };
+		9C1A22E0183FB5C7000938B2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A22DF183FB5C7000938B2 /* MainViewController.m */; };
 		9C1A22E2183FB5C7000938B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A22E1183FB5C7000938B2 /* Images.xcassets */; };
 		9C1A22E9183FB5C7000938B2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1A22E8183FB5C7000938B2 /* XCTest.framework */; };
 		9C1A22EA183FB5C7000938B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1A22C6183FB5C7000938B2 /* Foundation.framework */; };
@@ -34,6 +34,9 @@
 		9C29E089184275C2003CD6A3 /* right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C29E087184275C2003CD6A3 /* right@2x.png */; };
 		9C29E08C18427B6C003CD6A3 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C29E08A18427B6C003CD6A3 /* left.png */; };
 		9C29E08D18427B6C003CD6A3 /* left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C29E08B18427B6C003CD6A3 /* left@2x.png */; };
+		9C9623361843CCBF0058EC4F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9623351843CCBF0058EC4F /* RootViewController.m */; };
+		9C9623381843DDB70058EC4F /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9623371843DDB70058EC4F /* bg@2x.png */; };
+		9C96233B1843EC7D0058EC4F /* InsetTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C96233A1843EC7D0058EC4F /* InsetTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +62,8 @@
 		9C1A22D6183FB5C7000938B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9C1A22D9183FB5C7000938B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		9C1A22DC183FB5C7000938B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		9C1A22DE183FB5C7000938B2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9C1A22DF183FB5C7000938B2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9C1A22DE183FB5C7000938B2 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		9C1A22DF183FB5C7000938B2 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		9C1A22E1183FB5C7000938B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9C1A22E7183FB5C7000938B2 /* LightsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LightsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1A22E8183FB5C7000938B2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -78,6 +81,11 @@
 		9C29E087184275C2003CD6A3 /* right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right@2x.png"; sourceTree = "<group>"; };
 		9C29E08A18427B6C003CD6A3 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
 		9C29E08B18427B6C003CD6A3 /* left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left@2x.png"; sourceTree = "<group>"; };
+		9C9623341843CCBF0058EC4F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		9C9623351843CCBF0058EC4F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		9C9623371843DDB70058EC4F /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
+		9C9623391843EC7D0058EC4F /* InsetTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsetTextField.h; sourceTree = "<group>"; };
+		9C96233A1843EC7D0058EC4F /* InsetTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsetTextField.m; sourceTree = "<group>"; };
 		BB4A67D89B1B43F49BB0C765 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5939BFDCE6A44218FD615F5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,8 +158,12 @@
 			children = (
 				9C1A22D5183FB5C7000938B2 /* AppDelegate.h */,
 				9C1A22D6183FB5C7000938B2 /* AppDelegate.m */,
-				9C1A22DE183FB5C7000938B2 /* ViewController.h */,
-				9C1A22DF183FB5C7000938B2 /* ViewController.m */,
+				9C9623341843CCBF0058EC4F /* RootViewController.h */,
+				9C9623351843CCBF0058EC4F /* RootViewController.m */,
+				9C1A22DE183FB5C7000938B2 /* MainViewController.h */,
+				9C1A22DF183FB5C7000938B2 /* MainViewController.m */,
+				9C9623391843EC7D0058EC4F /* InsetTextField.h */,
+				9C96233A1843EC7D0058EC4F /* InsetTextField.m */,
 				9C1A22D8183FB5C7000938B2 /* Main_iPhone.storyboard */,
 				9C1A22DB183FB5C7000938B2 /* Main_iPad.storyboard */,
 				9C1A22E1183FB5C7000938B2 /* Images.xcassets */,
@@ -171,6 +183,7 @@
 				9C29E08B18427B6C003CD6A3 /* left@2x.png */,
 				9C29E086184275C2003CD6A3 /* right.png */,
 				9C29E087184275C2003CD6A3 /* right@2x.png */,
+				9C9623371843DDB70058EC4F /* bg@2x.png */,
 				9C1A22CE183FB5C7000938B2 /* Lights-Info.plist */,
 				9C1A22CF183FB5C7000938B2 /* InfoPlist.strings */,
 				9C1A22D2183FB5C7000938B2 /* main.m */,
@@ -285,6 +298,7 @@
 				9C1A22DD183FB5C7000938B2 /* Main_iPad.storyboard in Resources */,
 				9C1A22E2183FB5C7000938B2 /* Images.xcassets in Resources */,
 				9C1A22DA183FB5C7000938B2 /* Main_iPhone.storyboard in Resources */,
+				9C9623381843DDB70058EC4F /* bg@2x.png in Resources */,
 				9C1A22D1183FB5C7000938B2 /* InfoPlist.strings in Resources */,
 				9C29E08D18427B6C003CD6A3 /* left@2x.png in Resources */,
 			);
@@ -338,8 +352,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C1A22E0183FB5C7000938B2 /* ViewController.m in Sources */,
+				9C96233B1843EC7D0058EC4F /* InsetTextField.m in Sources */,
+				9C1A22E0183FB5C7000938B2 /* MainViewController.m in Sources */,
 				9C1A22D7183FB5C7000938B2 /* AppDelegate.m in Sources */,
+				9C9623361843CCBF0058EC4F /* RootViewController.m in Sources */,
 				9C1A22D3183FB5C7000938B2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

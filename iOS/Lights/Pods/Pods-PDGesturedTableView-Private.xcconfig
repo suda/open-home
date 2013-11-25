@@ -1,5 +1,5 @@
 #include "Pods-PDGesturedTableView.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/PDGesturedTableView" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/PDGesturedTableView"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/PDGesturedTableView" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/JASidePanels" "${PODS_ROOT}/Headers/PDGesturedTableView"
 OTHER_LDFLAGS = -ObjC ${PODS_PDGESTUREDTABLEVIEW_OTHER_LDFLAGS}
 PODS_ROOT = ${SRCROOT}

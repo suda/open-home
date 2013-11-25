@@ -1,4 +1,4 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/PDGesturedTableView"
-OTHER_LDFLAGS = -ObjC -framework UIKit
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/JASidePanels" "${PODS_ROOT}/Headers/PDGesturedTableView"
+OTHER_LDFLAGS = -ObjC -framework QuartzCore -framework UIKit
 PODS_ROOT = ${SRCROOT}/Pods
