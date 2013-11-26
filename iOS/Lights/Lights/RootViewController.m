@@ -14,6 +14,10 @@
 
 @implementation RootViewController
 
++ (RootViewController *)sharedRootViewController {
+    return (RootViewController *)[[[[UIApplication sharedApplication] delegate] window] rootViewController];
+}
+
 - (void)awakeFromNib {
     self.recognizesPanGesture = NO;
     

@@ -7,8 +7,6 @@
 //
 
 #import "MainViewController.h"
-#import "JASidePanelController.h"
-#import "UIViewController+JASidePanel.h"
 
 @interface MainViewController ()
 
@@ -47,24 +45,15 @@
     [self.navigationItem.rightBarButtonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
     
     // Load saved lights
-    lights = [NSMutableArray new];
-    documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    fileManager = [NSFileManager defaultManager];
-    
-    NSString *lightsPlistPath = [documentsDirectory stringByAppendingPathComponent:@"lights.plist"];
-    
-    if ([fileManager fileExistsAtPath:lightsPlistPath]) {
-        NSArray *plist = [NSArray arrayWithContentsOfFile:lightsPlistPath];
-        lights = [plist mutableCopy];
-    }
+    [OpenHome sharedOpenHome];
 }
 
 - (void)showSettings {
-    [(RootViewController *)[[[[UIApplication sharedApplication] delegate] window] rootViewController] showLeftPanelAnimated:YES];
+    [[RootViewController sharedRootViewController] showLeftPanelAnimated:YES];
 }
 
 - (void)showAddDevice {
-    [(RootViewController *)[[[[UIApplication sharedApplication] delegate] window] rootViewController] showRightPanelAnimated:YES];
+    [[RootViewController sharedRootViewController] showRightPanelAnimated:YES];
 }
 
 #pragma mark UITableView
@@ -74,7 +63,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [lights count];
+    return [[OpenHome sharedOpenHome].lights count];
 }
 
 -(PDGesturedTableViewCell *)tableView:(PDGesturedTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

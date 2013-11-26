@@ -34,6 +34,8 @@
 		9C29E089184275C2003CD6A3 /* right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C29E087184275C2003CD6A3 /* right@2x.png */; };
 		9C29E08C18427B6C003CD6A3 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C29E08A18427B6C003CD6A3 /* left.png */; };
 		9C29E08D18427B6C003CD6A3 /* left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C29E08B18427B6C003CD6A3 /* left@2x.png */; };
+		9C94BED5184508CA00A41CC4 /* OpenHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C94BED4184508CA00A41CC4 /* OpenHome.m */; };
+		9C94BEDB18451C3700A41CC4 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C94BEDA18451C3700A41CC4 /* SettingsViewController.m */; };
 		9C9623361843CCBF0058EC4F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9623351843CCBF0058EC4F /* RootViewController.m */; };
 		9C9623381843DDB70058EC4F /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9623371843DDB70058EC4F /* bg@2x.png */; };
 		9C96233B1843EC7D0058EC4F /* InsetTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C96233A1843EC7D0058EC4F /* InsetTextField.m */; };
@@ -86,6 +88,10 @@
 		9C29E087184275C2003CD6A3 /* right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right@2x.png"; sourceTree = "<group>"; };
 		9C29E08A18427B6C003CD6A3 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
 		9C29E08B18427B6C003CD6A3 /* left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left@2x.png"; sourceTree = "<group>"; };
+		9C94BED3184508CA00A41CC4 /* OpenHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenHome.h; sourceTree = "<group>"; };
+		9C94BED4184508CA00A41CC4 /* OpenHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenHome.m; sourceTree = "<group>"; };
+		9C94BED918451C3700A41CC4 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		9C94BEDA18451C3700A41CC4 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		9C9623341843CCBF0058EC4F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		9C9623351843CCBF0058EC4F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		9C9623371843DDB70058EC4F /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
@@ -167,20 +173,15 @@
 		9C1A22CC183FB5C7000938B2 /* Lights */ = {
 			isa = PBXGroup;
 			children = (
+				9C94BED818451C0B00A41CC4 /* Objects */,
+				9C1A22CD183FB5C7000938B2 /* Supporting Files */,
+				9C94BED618451BD200A41CC4 /* View Controllers */,
+				9C94BED718451BF400A41CC4 /* Views */,
+				9C1A22E1183FB5C7000938B2 /* Images.xcassets */,
 				9C1A22D5183FB5C7000938B2 /* AppDelegate.h */,
 				9C1A22D6183FB5C7000938B2 /* AppDelegate.m */,
-				9C9623341843CCBF0058EC4F /* RootViewController.h */,
-				9C9623351843CCBF0058EC4F /* RootViewController.m */,
-				9C1A22DE183FB5C7000938B2 /* MainViewController.h */,
-				9C1A22DF183FB5C7000938B2 /* MainViewController.m */,
-				9C9623391843EC7D0058EC4F /* InsetTextField.h */,
-				9C96233A1843EC7D0058EC4F /* InsetTextField.m */,
-				9C962344184400980058EC4F /* TableViewCell.h */,
-				9C962345184400980058EC4F /* TableViewCell.m */,
 				9C1A22D8183FB5C7000938B2 /* Main_iPhone.storyboard */,
 				9C1A22DB183FB5C7000938B2 /* Main_iPad.storyboard */,
-				9C1A22E1183FB5C7000938B2 /* Images.xcassets */,
-				9C1A22CD183FB5C7000938B2 /* Supporting Files */,
 			);
 			path = Lights;
 			sourceTree = "<group>";
@@ -225,6 +226,39 @@
 				9C1A22F1183FB5C7000938B2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C94BED618451BD200A41CC4 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C9623341843CCBF0058EC4F /* RootViewController.h */,
+				9C9623351843CCBF0058EC4F /* RootViewController.m */,
+				9C94BED918451C3700A41CC4 /* SettingsViewController.h */,
+				9C94BEDA18451C3700A41CC4 /* SettingsViewController.m */,
+				9C1A22DE183FB5C7000938B2 /* MainViewController.h */,
+				9C1A22DF183FB5C7000938B2 /* MainViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9C94BED718451BF400A41CC4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9C9623391843EC7D0058EC4F /* InsetTextField.h */,
+				9C96233A1843EC7D0058EC4F /* InsetTextField.m */,
+				9C962344184400980058EC4F /* TableViewCell.h */,
+				9C962345184400980058EC4F /* TableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		9C94BED818451C0B00A41CC4 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				9C94BED3184508CA00A41CC4 /* OpenHome.h */,
+				9C94BED4184508CA00A41CC4 /* OpenHome.m */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,8 +410,10 @@
 				9C96233B1843EC7D0058EC4F /* InsetTextField.m in Sources */,
 				9C962346184400980058EC4F /* TableViewCell.m in Sources */,
 				9C1A22E0183FB5C7000938B2 /* MainViewController.m in Sources */,
+				9C94BEDB18451C3700A41CC4 /* SettingsViewController.m in Sources */,
 				9C1A22D7183FB5C7000938B2 /* AppDelegate.m in Sources */,
 				9C9623361843CCBF0058EC4F /* RootViewController.m in Sources */,
+				9C94BED5184508CA00A41CC4 /* OpenHome.m in Sources */,
 				9C1A22D3183FB5C7000938B2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

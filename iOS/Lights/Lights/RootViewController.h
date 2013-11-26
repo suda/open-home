@@ -10,4 +10,6 @@
 
 @interface RootViewController : JASidePanelController
 
++ (RootViewController *)sharedRootViewController;
+
 @end

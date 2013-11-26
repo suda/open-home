@@ -9,15 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "PDGesturedTableView.h"
 #import "RootViewController.h"
+#import "OpenHome.h"
 
 @interface MainViewController : UITableViewController <UITableViewDataSource> {
     BOOL turnOn;
     BOOL turnOff;
-    
-    NSString *serverAddress;
-    NSMutableArray *lights;
-    NSString *documentsDirectory;
-    NSFileManager *fileManager;
 }
 
 @property (nonatomic, retain) IBOutlet PDGesturedTableView *gesturedTableView;

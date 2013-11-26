@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="66" y="-282"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="Bh7-4F-eZ6">
             <objects>
-                <viewController storyboardIdentifier="leftViewController" id="wUZ-nu-yRy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="leftViewController" id="wUZ-nu-yRy" customClass="SettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mlG-ZP-5mE"/>
                         <viewControllerLayoutGuide type="bottom" id="Y9Q-XU-Wpr"/>
@@ -107,9 +107,15 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="wUZ-nu-yRy" id="5yA-zb-RiL"/>
+                                </connections>
                             </textField>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="serverField" destination="0B8-7g-NRt" id="vJx-H6-y5k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WgQ-ut-lIM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
