@@ -821,6 +821,7 @@ static char ja_kvoContext;
 #pragma mark - Showing Panels
 
 - (void)_showLeftPanel:(BOOL)animated bounce:(BOOL)shouldBounce {
+    [self.leftPanel viewWillAppear:YES];
     self.state = JASidePanelLeftVisible;
     [self _loadLeftPanel];
     
@@ -843,6 +844,7 @@ static char ja_kvoContext;
 }
 
 - (void)_showRightPanel:(BOOL)animated bounce:(BOOL)shouldBounce {
+    [self.rightPanel viewWillAppear:YES];
     self.state = JASidePanelRightVisible;
     [self _loadRightPanel];
     
