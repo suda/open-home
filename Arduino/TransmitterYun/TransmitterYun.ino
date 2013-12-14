@@ -15,7 +15,7 @@
 #include <YunClient.h>
 
 // Transmitter is connected to Arduino Pin #2
-#define TRANSMIT_PIN 2
+#define TRANSMIT_PIN 9
 
 RCSwitch mySwitch = RCSwitch();
 YunServer server;
