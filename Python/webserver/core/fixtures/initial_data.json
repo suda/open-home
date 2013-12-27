@@ -1,0 +1,5 @@
+[
+    {"pk": 1, "model": "core.vendor", "fields": {"identifier": "clarus", "name": "Clarus"}},
+    {"pk": 1, "model": "core.product", "fields": {"role": 1, "identifier": "clarus01", "vendor": 1, "name": "Clarus - 01"}},
+    {"pk": 1, "model": "core.group", "fields": {"name": "Default"}}
+]
