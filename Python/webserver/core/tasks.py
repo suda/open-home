@@ -1,7 +1,6 @@
 from __future__ import absolute_import
 from celery.utils.log import get_task_logger
 from django.conf import settings
-from django.db.models.signals import post_save
 from django.utils.timezone import now
 from serial import Serial
 
@@ -24,13 +23,8 @@ def send_command(pk):
             product.send_command(serial, command, logger)
             serial.close()
             command.sent_on = now()
-            command.save()
+            command.save(send_command=True)
         except AttributeError:
             logger.error(u'Unsupported product "%s"' % (identifier, ))
     except Command.DoesNotExist:
         logger.error(u'Task delayed but no commands waiting')
-
-def send_command_task(sender, instance, **kwargs):
-     send_command.delay(instance.pk)
-
-post_save.connect(send_command_task, sender=Command, dispatch_uid='send_command_task')

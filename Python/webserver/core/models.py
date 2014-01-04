@@ -1,9 +1,6 @@
 import json
 from django.db import models
 
-from django.db.models.signals import post_save
-
-
 class Vendor(models.Model):
     """
     Model containing different product vendors
@@ -103,6 +100,13 @@ class Command(models.Model):
 
     def __unicode__(self):
         return self.get_kind_display() + u' to ' + unicode(self.device)
+
+    def save(self, command_sent=False, *args, **kwargs):
+        super(Command, self).save(*args, **kwargs)
+
+        if not command_sent:
+            from .tasks import send_command
+            send_command.delay(self.pk)
 
 class Update(models.Model):
     """
