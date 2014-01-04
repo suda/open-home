@@ -16,6 +16,8 @@
 
 + (OpenHome *)sharedOpenHome;
 
+- (void)addDeviceGroup:(NSArray *)group;
+
 @property (nonatomic, retain) NSString *serverAddress;
 @property (nonatomic, retain) NSMutableArray *lights;
 

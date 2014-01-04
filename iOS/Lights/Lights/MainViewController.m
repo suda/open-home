@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "TableViewCell.h"
 
 @interface MainViewController ()
 
@@ -66,10 +67,10 @@
     return [[OpenHome sharedOpenHome].lights count];
 }
 
--(PDGesturedTableViewCell *)tableView:(PDGesturedTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+-(TableViewCell *)tableView:(PDGesturedTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
     
-    PDGesturedTableViewCell *cell = (PDGesturedTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    TableViewCell *cell = (TableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if ([cell setupForGesturedTableView:tableView]) {
         [cell setBouncesAtLastSlidingFraction:YES];
         
@@ -129,7 +130,9 @@
         
         [cell addSlidingFraction:offSlidingFraction];
     }
-
+    
+    [cell.label setText:[[OpenHome sharedOpenHome].lights objectAtIndex:indexPath.row]];
+    
     return cell;
 }
 

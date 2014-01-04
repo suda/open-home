@@ -159,10 +159,10 @@
             </objects>
             <point key="canvasLocation" x="-705" y="-282"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Device View Controller-->
         <scene sceneID="O5r-3w-09g">
             <objects>
-                <viewController storyboardIdentifier="rightViewController" id="DfX-B3-tMw" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rightViewController" id="DfX-B3-tMw" customClass="AddDeviceViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="85n-mn-I57"/>
                         <viewControllerLayoutGuide type="bottom" id="FNc-s6-a4P"/>
@@ -175,42 +175,80 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add device" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lb0-ac-YtT">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add a device" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lb0-ac-YtT">
                                 <rect key="frame" x="93" y="30" width="202" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pulse length" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Y5p-dg-jdw" customClass="InsetTextField">
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pulse length" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Y5p-dg-jdw" customClass="InsetTextField">
                                 <rect key="frame" x="90" y="72" width="210" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="DfX-B3-tMw" id="IxD-dp-GQH"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tri-state code" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fF8-bj-sLa" customClass="InsetTextField">
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tri-state code (on or off)" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fF8-bj-sLa" customClass="InsetTextField">
                                 <rect key="frame" x="90" y="110" width="210" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" keyboardType="alphabet" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="DfX-B3-tMw" id="h0H-ry-wPO"/>
+                                </connections>
+                            </textField>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pulse length" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="GiE-IR-8oO" customClass="InsetTextField">
+                                <rect key="frame" x="89" y="168" width="210" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="delegate" destination="DfX-B3-tMw" id="ynW-bE-BJF"/>
+                                </connections>
+                            </textField>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tri-state code (on or off)" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ifP-4D-Zmh" customClass="InsetTextField">
+                                <rect key="frame" x="89" y="206" width="210" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" keyboardType="alphabet" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="DfX-B3-tMw" id="4fG-Ym-Jhq"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riO-pU-3Em">
-                                <rect key="frame" x="93" y="148" width="202" height="30"/>
+                                <rect key="frame" x="93" y="148" width="162" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Add device to this set...">
+                                <state key="normal" title="Add a second device...">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="0.75" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addMoreDevices:" destination="DfX-B3-tMw" eventType="touchUpInside" id="uyh-Gc-yxI"/>
+                                </connections>
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="addMoreButton" destination="riO-pU-3Em" id="bHz-FV-yKc"/>
+                        <outlet property="pulseLengthField1" destination="Y5p-dg-jdw" id="L3l-vO-sNj"/>
+                        <outlet property="pulseLengthField2" destination="GiE-IR-8oO" id="wtn-Ih-A4U"/>
+                        <outlet property="triStateCodeField1" destination="fF8-bj-sLa" id="adp-PX-7R3"/>
+                        <outlet property="triStateCodeField2" destination="ifP-4D-Zmh" id="BBs-hs-CJA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cr1-N6-IZY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -32,6 +32,14 @@
         _serverAddress = [userDefaults stringForKey:@"serverAddress"];
         
         _lights = [NSMutableArray new];
+        [_lights addObject:@"Bedroom"];
+        [_lights addObject:@"Kitchen"];
+        [_lights addObject:@"Living Room"];
+        [_lights addObject:@"Kids Room"];                
+        [_lights addObject:@"Stairs"];
+        [_lights addObject:@"Garage"];
+        [_lights addObject:@"Porch"];
+        
         NSString *lightsPlistPath = [documentsDirectory stringByAppendingPathComponent:@"lights.plist"];
         
         if ([fileManager fileExistsAtPath:lightsPlistPath]) {
@@ -46,6 +54,11 @@
     _serverAddress = serverAddress;
     [userDefaults setObject:_serverAddress forKey:@"serverAddress"];
     [userDefaults synchronize];
+}
+
+- (void)addDeviceGroup:(NSArray *)group {
+    [_lights addObject:group];
+    
 }
 
 @end

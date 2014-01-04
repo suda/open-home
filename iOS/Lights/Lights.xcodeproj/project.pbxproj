@@ -34,8 +34,11 @@
 		9C29E089184275C2003CD6A3 /* right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C29E087184275C2003CD6A3 /* right@2x.png */; };
 		9C29E08C18427B6C003CD6A3 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C29E08A18427B6C003CD6A3 /* left.png */; };
 		9C29E08D18427B6C003CD6A3 /* left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C29E08B18427B6C003CD6A3 /* left@2x.png */; };
+		9C8FCAF4185A0DEF0002657D /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8FCAF3185A0DEF0002657D /* Reveal.framework */; };
 		9C94BED5184508CA00A41CC4 /* OpenHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C94BED4184508CA00A41CC4 /* OpenHome.m */; };
 		9C94BEDB18451C3700A41CC4 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C94BEDA18451C3700A41CC4 /* SettingsViewController.m */; };
+		9C94BEDE1845222800A41CC4 /* AddDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C94BEDD1845222800A41CC4 /* AddDeviceViewController.m */; };
+		9C94BEE118452F3B00A41CC4 /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C94BEE018452F3B00A41CC4 /* Device.m */; };
 		9C9623361843CCBF0058EC4F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9623351843CCBF0058EC4F /* RootViewController.m */; };
 		9C9623381843DDB70058EC4F /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C9623371843DDB70058EC4F /* bg@2x.png */; };
 		9C96233B1843EC7D0058EC4F /* InsetTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C96233A1843EC7D0058EC4F /* InsetTextField.m */; };
@@ -88,10 +91,15 @@
 		9C29E087184275C2003CD6A3 /* right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right@2x.png"; sourceTree = "<group>"; };
 		9C29E08A18427B6C003CD6A3 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
 		9C29E08B18427B6C003CD6A3 /* left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left@2x.png"; sourceTree = "<group>"; };
+		9C8FCAF3185A0DEF0002657D /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reveal.framework; path = "../../../../../../../Applications/Reveal.app/Contents/SharedSupport/iOS-Libraries/Reveal.framework"; sourceTree = "<group>"; };
 		9C94BED3184508CA00A41CC4 /* OpenHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenHome.h; sourceTree = "<group>"; };
 		9C94BED4184508CA00A41CC4 /* OpenHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenHome.m; sourceTree = "<group>"; };
 		9C94BED918451C3700A41CC4 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		9C94BEDA18451C3700A41CC4 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		9C94BEDC1845222800A41CC4 /* AddDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDeviceViewController.h; sourceTree = "<group>"; };
+		9C94BEDD1845222800A41CC4 /* AddDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDeviceViewController.m; sourceTree = "<group>"; };
+		9C94BEDF18452F3B00A41CC4 /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		9C94BEE018452F3B00A41CC4 /* Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
 		9C9623341843CCBF0058EC4F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		9C9623351843CCBF0058EC4F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		9C9623371843DDB70058EC4F /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
@@ -115,6 +123,7 @@
 				9C29E07618410BC9003CD6A3 /* QuartzCore.framework in Frameworks */,
 				9C29E07418410BBA003CD6A3 /* CFNetwork.framework in Frameworks */,
 				9C1A22C9183FB5C7000938B2 /* CoreGraphics.framework in Frameworks */,
+				9C8FCAF4185A0DEF0002657D /* Reveal.framework in Frameworks */,
 				9C1A22CB183FB5C7000938B2 /* UIKit.framework in Frameworks */,
 				9C1A22C7183FB5C7000938B2 /* Foundation.framework in Frameworks */,
 				9C29E07218410AD8003CD6A3 /* Reveal.framework in Frameworks */,
@@ -159,6 +168,7 @@
 		9C1A22C5183FB5C7000938B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C8FCAF3185A0DEF0002657D /* Reveal.framework */,
 				9C29E07518410BC9003CD6A3 /* QuartzCore.framework */,
 				9C29E07318410BBA003CD6A3 /* CFNetwork.framework */,
 				9C1A22C6183FB5C7000938B2 /* Foundation.framework */,
@@ -237,6 +247,8 @@
 				9C94BEDA18451C3700A41CC4 /* SettingsViewController.m */,
 				9C1A22DE183FB5C7000938B2 /* MainViewController.h */,
 				9C1A22DF183FB5C7000938B2 /* MainViewController.m */,
+				9C94BEDC1845222800A41CC4 /* AddDeviceViewController.h */,
+				9C94BEDD1845222800A41CC4 /* AddDeviceViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -255,6 +267,8 @@
 		9C94BED818451C0B00A41CC4 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				9C94BEDF18452F3B00A41CC4 /* Device.h */,
+				9C94BEE018452F3B00A41CC4 /* Device.m */,
 				9C94BED3184508CA00A41CC4 /* OpenHome.h */,
 				9C94BED4184508CA00A41CC4 /* OpenHome.m */,
 			);
@@ -410,11 +424,13 @@
 				9C96233B1843EC7D0058EC4F /* InsetTextField.m in Sources */,
 				9C962346184400980058EC4F /* TableViewCell.m in Sources */,
 				9C1A22E0183FB5C7000938B2 /* MainViewController.m in Sources */,
+				9C94BEE118452F3B00A41CC4 /* Device.m in Sources */,
 				9C94BEDB18451C3700A41CC4 /* SettingsViewController.m in Sources */,
 				9C1A22D7183FB5C7000938B2 /* AppDelegate.m in Sources */,
 				9C9623361843CCBF0058EC4F /* RootViewController.m in Sources */,
 				9C94BED5184508CA00A41CC4 /* OpenHome.m in Sources */,
 				9C1A22D3183FB5C7000938B2 /* main.m in Sources */,
+				9C94BEDE1845222800A41CC4 /* AddDeviceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,7 +521,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -539,7 +555,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -559,7 +575,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lights/Lights-Prefix.pch";
 				INFOPLIST_FILE = "Lights/Lights-Info.plist";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -578,7 +594,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lights/Lights-Prefix.pch";
 				INFOPLIST_FILE = "Lights/Lights-Info.plist";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
