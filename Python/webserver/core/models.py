@@ -58,7 +58,7 @@ class Device(models.Model):
     payload = models.TextField()    # JSON payload containing device parameters (i.e. ID)
 
     def __unicode__(self):
-        return unicode(self.name)
+        return unicode(self.group) + u' ' + unicode(self.name)
 
     def get_last_command(self):
         try:

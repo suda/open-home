@@ -23,7 +23,7 @@ def send_command(pk):
             product.send_command(serial, command, logger)
             serial.close()
             command.sent_on = now()
-            command.save(send_command=True)
+            command.save(command_sent=True)
         except AttributeError:
             logger.error(u'Unsupported product "%s"' % (identifier, ))
     except Command.DoesNotExist:
