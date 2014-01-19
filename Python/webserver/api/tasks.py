@@ -4,7 +4,7 @@ from django.conf import settings
 from django.utils.timezone import now
 from serial import Serial
 
-from core.models import Command
+from .models import Command
 from webserver.celery import app
 
 logger = get_task_logger(__name__)
@@ -15,7 +15,7 @@ def send_command(pk):
         command = Command.objects.get(pk=pk)
         identifier = command.device.product.identifier
         classname = identifier.title() + u'Product'
-        module = __import__('core.products', fromlist=[classname])
+        module = __import__('api.products', fromlist=[classname])
         try:
             cl = getattr(module, classname)
             product = cl()

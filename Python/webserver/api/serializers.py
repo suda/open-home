@@ -1,6 +1,6 @@
 import json
 from rest_framework import serializers
-from core.fields import PayloadField
+from .fields import PayloadField
 from .models import Vendor, Product, Group, Device, Command, Update
 
 

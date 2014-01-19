@@ -17,4 +17,4 @@ class Migration(SchemaMigration):
         
     }
 
-    complete_apps = ['core']
+    complete_apps = ['api']

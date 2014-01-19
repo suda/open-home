@@ -41,7 +41,7 @@ INSTALLED_APPS = (
     'rest_framework',
     'kombu.transport.django',
 
-    'core',
+    'api',
 )
 
 MIDDLEWARE_CLASSES = (
