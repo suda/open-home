@@ -1,0 +1,44 @@
+.clear {
+    clear: both;
+}
+
+a.button {
+    margin: 15px 0;
+}
+
+.list>li {
+    height: 64px;
+}
+
+.list>li h3 {
+    font-size: 2em;
+    line-height: 2em;
+    float: left;
+    width: calc(100% - 150px);
+}
+
+.list>li div {
+    width: 148px;
+    float: right;
+}
+
+.list>li div a {
+    width: 50%;
+    float: left;
+}
+
+.list>li.nav::after {
+    display: none;
+}
+
+.isiOS nav {
+    top: 20px !important;
+}
+
+.isiOS article {
+    top: 65px !important;
+}
+
+.isWindows a.button {
+    margin: 10px 0 !important;
+}

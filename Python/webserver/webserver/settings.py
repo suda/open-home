@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'kombu.transport.django',
 
     'api',
+    'webapp',
 )
 
 MIDDLEWARE_CLASSES = (

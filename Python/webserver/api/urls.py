@@ -12,7 +12,5 @@ router.register(r'command', CommandViewSet)
 router.register(r'update', UpdateViewSet)
 
 urlpatterns = patterns('',
-    url(r'^$', index, name='index'),
-
-    url(r'^api/v1/', include(router.urls)),
+    url(r'^', include(router.urls)),
 )

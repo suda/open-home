@@ -1,0 +1,47 @@
+{% load staticfiles %}
+{% load webapp %}
+<!DOCTYPE html>
+<html manifest="{% url "cache_manifest" %}">
+<head>
+    <title>Lights</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+
+    <link rel="apple-touch-icon-precomposed" sizes="29x29" href="{% static "img/AppIcon29x29.png" %}">
+    <link rel="apple-touch-icon-precomposed" sizes="40x40" href="{% static "img/AppIcon40x40.png" %}">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{% static "img/AppIcon60x60.png" %}">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{% static "img/AppIcon76x76.png" %}">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Lights">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="{% static "img/AppIcon144x144.png" %}">
+    <meta name="msapplication-TileColor" content="#00ACF4">
+    <meta name="application-name" content="Lights"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
+    <!--
+    <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+    -->
+
+    <link rel="stylesheet" href="{% chui_css %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <script src="{% static "js/jquery-2.0.3.min.js" %}"></script>
+    <script src="{% static "js/chui-3.5.1.min.js" %}"></script>
+    <script src="{% static "js/script.js" %}"></script>
+</head>
+<body>
+    <nav class="current">
+        <h1>Lights</h1>
+    </nav>
+
+    <article id="main" class="current navigable">
+        <section>
+            <ul class="list"></ul>
+        </section>
+    </article>
+</body>
+</html>

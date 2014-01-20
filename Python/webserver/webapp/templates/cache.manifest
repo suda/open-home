@@ -1,0 +1,15 @@
+CACHE MANIFEST
+{% load staticfiles %}
+/
+{% static "img/AppIcon29x29.png" %}
+{% static "img/AppIcon40x40.png" %}
+{% static "img/AppIcon60x60.png" %}
+{% static "img/AppIcon76x76.png" %}
+{% static "img/AppIcon144x144.png" %}
+{% static "css/chui-ios-3.5.1.min.css" %}
+{% static "css/chui-android-3.5.1.min.css" %}
+{% static "css/chui-win-3.5.1.min.css" %}
+{% static "css/style.css" %}
+{% static "js/jquery-2.0.3.min.js" %}
+{% static "js/chui-3.5.1.min.js" %}
+{% static "js/script.js" %}
