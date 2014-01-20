@@ -35,7 +35,6 @@ class CommandSerializer(serializers.Serializer):
         return '' if obj is None else None if not isinstance(obj, Command) else obj.get_kind_display()
 
     def validate_kind(self, attrs, source):
-        print self, attrs, source
         value = attrs[source]
         if value is None or \
            value not in map(lambda kind: kind[0], Command.KIND_CHOICES):
@@ -44,7 +43,6 @@ class CommandSerializer(serializers.Serializer):
         return attrs
 #
     def validate_device(self, attrs, source):
-        print self, attrs, source
         value = attrs[source]
         if value is None and attrs.get('group') is None:
             raise serializers.ValidationError('Device or group required')
@@ -52,7 +50,6 @@ class CommandSerializer(serializers.Serializer):
         return attrs
 
     def validate_group(self, attrs, source):
-        print self, attrs, source
         value = attrs[source]
         if value is None and attrs.get('device') is None:
             raise serializers.ValidationError('Device or group required')
