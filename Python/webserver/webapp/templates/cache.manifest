@@ -1,6 +1,10 @@
 CACHE MANIFEST
 {% load staticfiles %}
-/
+# rev 3
+NETWORK:
+/api/v1/group/
+/api/v1/command/
+CACHE:
 {% static "img/AppIcon29x29.png" %}
 {% static "img/AppIcon40x40.png" %}
 {% static "img/AppIcon60x60.png" %}
