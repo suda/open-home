@@ -14,7 +14,7 @@
 #include <YunServer.h>
 #include <YunClient.h>
 
-// Transmitter is connected to Arduino Pin #2
+// Transmitter is connected to Arduino Pin #9
 #define TRANSMIT_PIN 9
 
 RCSwitch mySwitch = RCSwitch();
@@ -74,6 +74,6 @@ void parse433(YunClient client) {
     client.print(triStateCode);
     client.print(F("\" }"));
   } else {
-    client.print(F("{ error: \"Unsufficient paramenters\" }"));  
+    client.print(F("{ \"error\": \"Unsufficient paramenters\" }"));  
   }
 }
