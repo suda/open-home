@@ -17,6 +17,12 @@
 // Transmitter is connected to Arduino Pin #9
 #define TRANSMIT_PIN 9
 
+// WARNING: Set to your own values from https://github.com/appsome/open-home/wiki/Recording-codes
+#define ON_PULSE_LENGTH "209"
+#define ON_TRISTATE "FF000FFF0101"
+#define OFF_PULSE_LENGTH "209"
+#define OFF_TRISTATE "FF000FFF0110"
+
 RCSwitch mySwitch = RCSwitch();
 YunServer server;
 
@@ -54,6 +60,8 @@ void process(YunClient client) {
 
   if (command == "433") {
     parse433(client);
+  } else {
+    responseIndex(client);
   }
 }
 
@@ -70,10 +78,31 @@ void parse433(YunClient client) {
     triStateString.toCharArray(triStateCode, 13);
     mySwitch.sendTriState(triStateCode);
 
+    client.println(F("Status: 301"));
+    client.println(F("Location: /arduino/index.html"));
+    client.println();
     client.print(F("{ \"sent\": \""));
     client.print(triStateCode);
     client.print(F("\" }"));
   } else {
     client.print(F("{ \"error\": \"Unsufficient paramenters\" }"));  
   }
+}
+
+void responseIndex(YunClient client) {
+  client.println(F("Status: 200"));
+  client.println(F("Content-type: text/html"));
+  client.println();
+  
+  client.print(F("<a href=\"/arduino/433/"));
+  client.print(ON_PULSE_LENGTH);
+  client.print(F("/"));
+  client.print(ON_TRISTATE);
+  client.print(F("\">ON</a><br>"));
+  
+  client.print(F("<a href=\"/arduino/433/"));
+  client.print(OFF_PULSE_LENGTH);
+  client.print(F("/"));
+  client.print(OFF_TRISTATE);
+  client.print(F("\">OFF</a><br>"));
 }
